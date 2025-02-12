@@ -1,0 +1,43 @@
+.picture-item {
+  position: relative;
+  width: 25%;
+  margin: 10px;
+  perspective: 1000px; /* Ajout d'une perspective pour améliorer l'effet 3D */
+}
+
+.picture-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  border-radius: 8px;
+}
+
+.picture-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.picture-item:hover .picture-description {
+  opacity: 1;
+}
+
+.main-pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

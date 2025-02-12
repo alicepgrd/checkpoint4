@@ -1,21 +1,29 @@
-create table user (
-  id int unsigned primary key auto_increment not null,
-  email varchar(255) not null unique,
-  password varchar(255) not null
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50) NOT NULL DEFAULT 'admin'
 );
 
-create table item (
-  id int unsigned primary key auto_increment not null,
-  title varchar(255) not null,
-  user_id int unsigned not null,
-  foreign key(user_id) references user(id)
+INSERT INTO users (name, email, password, role)
+VALUES ('John Doe', 'john.doe@example.com', 'hashed_password_here', 'photographer');
+
+
+CREATE TABLE pictures (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    image VARCHAR(255) NOT NULL,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
-insert into user(id, email, password)
-values
-  (1, "jdoe@mail.com", "123456");
-
-insert into item(id, title, user_id)
-values
-  (1, "Stuff", 1),
-  (2, "Doodads", 1);
+INSERT INTO pictures (title, description, image, user_id)
+VALUES 
+(
+  "Cuba",
+  "Cette photographie, prise à La Havane, reflète la simplicité et l’authenticité de Cuba. Les rues, empreintes d’histoire, se dessinent sous un ciel clair, où l’architecture ancienne rencontre le rythme tranquille du quotidien. Un moment de calme, où chaque élément semble capturer l'âme de l'île.",
+  "https://cdn.pixabay.com/photo/2020/05/04/11/21/automobile-5128760_1280.jpg",
+   1
+);

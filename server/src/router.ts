@@ -15,4 +15,14 @@ router.post("/api/items", itemActions.add);
 
 /* ************************************************************************* */
 
+import picturesActions from "./modules/item/Pictures/picturesActions";
+
+router.get("/api/pictures", picturesActions.browse);
+
+router.get("/api/pictures/:id", picturesActions.read);
+
+router.post("/api/pictures", picturesActions.add);
+
+// router.delete("/api/pictures/:id", picturesActions.deletePicture);
+
 export default router;

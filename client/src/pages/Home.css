@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap");
+
+.header-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.header-home h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-home p {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-home-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-home > img {
+  width: 33%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+}
+
+.about p {
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
+}
