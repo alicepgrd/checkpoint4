@@ -1,4 +1,4 @@
-/* Global */
+
 .about-container {
   font-family: "Arial", sans-serif;
   color: #222;
@@ -37,4 +37,53 @@
   line-height: 1.6;
   color: #444;
   margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; 
+  }
+
+  .about-image {
+    width: 80%; 
+  }
+
+  .about-content {
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem; 
+    text-align: center; 
+  }
+
+  .about-text p {
+    font-size: 1rem; 
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .about-image {
+    width: 100%; 
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    margin:none;
+  }
+
+  .about-text h2 {
+    font-size: 2rem; 
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }

@@ -18,7 +18,7 @@ footer p {
   color: white;
   margin-top: 1%;
 }
-/* Responsive design */
+
 @media (max-width: 768px) {
   footer h2 {
     font-size: 1rem;
