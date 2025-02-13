@@ -24,3 +24,9 @@
   text-decoration: none;
   color: black;
 }
+@media (max-width: 480px) {
+  .main-header h1 {
+    font-size: 1rem; 
+    padding: 12px;
+  }
+}

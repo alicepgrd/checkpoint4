@@ -70,3 +70,44 @@
   color: #000;
   border: 2px solid #000;
 }
+
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 70%;
+  }
+
+  .form-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    max-width: 90%;
+  }
+
+  .form-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.8rem;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+

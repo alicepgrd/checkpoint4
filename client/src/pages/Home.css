@@ -42,3 +42,53 @@
   font-size: 2.5rem;
   margin-bottom: 5%;
 }
+
+@media (max-width: 768px) {
+  .header-home {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .header-home > img {
+    width: 40%;
+    margin-top: 20px;
+  }
+
+  .header-home h1 {
+    font-size: 3.5rem;
+  }
+
+  .header-home p {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-home {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .header-home > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .header-home h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-home p {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-title {
+    font-size: 1.8rem;
+    margin-bottom: 4%;
+  }
+}
