@@ -4,7 +4,7 @@ function Form() {
   return (
     <footer className="footer">
       <section className="form-container">
-        <h2>Contact</h2>
+        <h2>CONTACT</h2>
         <form className="contact-form">
           <label htmlFor="name">Name :</label>
           <input type="text" id="name" name="name" required />

@@ -23,6 +23,8 @@ router.get("/api/pictures/:id", picturesActions.read);
 
 router.post("/api/pictures", picturesActions.add);
 
-// router.delete("/api/pictures/:id", picturesActions.deletePicture);
+router.delete("/api/pictures/:id", picturesActions.destroy);
+
+router.put("/api/pictures/:id", picturesActions.edit);
 
 export default router;

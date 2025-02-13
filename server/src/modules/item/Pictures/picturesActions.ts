@@ -40,6 +40,28 @@ const add: RequestHandler = async (req, res, next) => {
   }
 };
 
+const edit: RequestHandler = async (req, res, next) => {
+  try {
+    const pictureId = Number(req.params.id);
+    const updatedPicture = {
+      title: req.body.title,
+      description: req.body.description,
+      image: req.body.image,
+      user_id: req.body.user_id,
+    };
+
+    const success = await picturesRepository.update(pictureId, updatedPicture);
+
+    if (success) {
+      res.status(200).json({ message: "Image mise à jour avec succès" });
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 const destroy: RequestHandler = async (req, res, next) => {
   try {
     const pictureId = Number(req.params.id);
@@ -55,4 +77,4 @@ const destroy: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { browse, read, add, destroy };
+export default { browse, read, add, destroy, edit };

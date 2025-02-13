@@ -1,0 +1,33 @@
+### 
+GET http://localhost:3310/api/pictures HTTP/1.1
+Content-Type: application/json
+
+### T
+GET http://localhost:3310/api/pictures/1 HTTP/1.1
+Content-Type: application/json
+
+### 
+POST http://localhost:3310/api/pictures HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Nouvelle photo",
+  "description": "Une nouvelle photo de test",
+  "image": "https://example.com/photo.jpg",
+  "user_id": 1
+}
+
+### 
+PUT http://localhost:3310/api/pictures/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Photo mise à jour",
+  "description": "Description mise à jour",
+  "image": "https://example.com/photo-updated.jpg",
+  "user_id": 1
+}
+
+### 
+DELETE http://localhost:3310/api/pictures/1 HTTP/1.1
+Content-Type: application/json

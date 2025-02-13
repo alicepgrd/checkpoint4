@@ -12,18 +12,11 @@ function Home() {
         </section>
         <img src="building.jpg" alt="profile-picture" />
       </header>
+      <h2 className="portfolio-title">PORTFOLIO</h2>
       <Pictures />
-      <section className="about">
-        <h2> ABOUT </h2>
-        <p>
-          {" "}
-          Je suis Eliot Greenfield, photographe passionné par l’art de saisir
-          l’éphémère. Mon travail célèbre la beauté des instants simples,
-          transformant l’ordinaire en émotions intemporelles. Bienvenue dans mon
-          univers visuel, où chaque image raconte une histoire.
-        </p>
+      <section id="contact-section">
+        <Form />
       </section>
-      <Form />
     </>
   );
 }

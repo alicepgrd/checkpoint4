@@ -35,6 +35,14 @@ class PicturesRepository {
     return rows as Picture[];
   }
 
+  async update(id: number, picture: Partial<Picture>) {
+    const [result] = await databaseClient.query<Result>(
+      "UPDATE pictures SET title = ?, description = ?, image = ?, user_id = ? WHERE id = ?",
+      [picture.title, picture.description, picture.image, picture.user_id, id],
+    );
+    return result.affectedRows > 0;
+  }
+
   async delete(id: number) {
     const [result] = await databaseClient.query<Result>(
       "delete from pictures where id = ?",
